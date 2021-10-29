@@ -24,7 +24,7 @@ const StatusBox: React.FC<Props> = ({ status, taskData, handleDragDropMovement, 
 	});
 
     return (
-        <Box 
+        <Box
             sx={boxStyle}
             ref={drop}
         >

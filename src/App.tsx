@@ -54,6 +54,7 @@ function App() {
 
 	const handleDragDropMovement = (taskId: number,
 		targetStatus: string) => {
+			console.log("Drag starts!!");
 			let currentTask = allTasks.filter(task => task.id === taskId);
 			currentTask[0].status = targetStatus;
 			let remainingTasks = allTasks.filter(task => task.id !== taskId);
@@ -101,6 +102,8 @@ function App() {
 								progressTask={progressTask}
 								setProgressTask={setProgressTask}
 								toggleModal={toggleModal}
+								allTasks={allTasks}
+								setAllTasks={setAllTasks}
 							/>
 						</div>
 					</Modal>

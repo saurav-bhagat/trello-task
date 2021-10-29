@@ -16,6 +16,8 @@ interface Props {
     progressTask: Array<TaskProps>;
     setProgressTask: Dispatch<SetStateAction<TaskProps[]>>;
     toggleModal: () => void;
+    allTasks: Array<TaskProps>,
+    setAllTasks: Dispatch<SetStateAction<TaskProps[]>>;
 }
 
 const CreateTaskForm: React.FC<Props> = ({
@@ -25,7 +27,9 @@ const CreateTaskForm: React.FC<Props> = ({
     setOpenTask,
     progressTask,
     setProgressTask,
-    toggleModal
+    toggleModal,
+    allTasks,
+    setAllTasks
 }) => {
 
     const [title, setTitle] = useState<string>('');
@@ -50,6 +54,7 @@ const CreateTaskForm: React.FC<Props> = ({
         }else if(status === 'Done'){
             setDoneTask([task, ...doneTask])
         }
+        setAllTasks([task, ...allTasks])
         toggleModal();
     }
 
