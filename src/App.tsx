@@ -78,7 +78,7 @@ function App() {
 		<DndProvider backend={HTML5Backend}>
 			<div className="App">
 				<div className="header">
-					<h1>Trello Task</h1>
+					<h1>Trello Task(Drag & Drop Task)</h1>
 					<Button 
 						variant="contained" 
 						onClick={toggleModal}
